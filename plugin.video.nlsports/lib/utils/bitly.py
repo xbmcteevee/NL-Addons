@@ -4,6 +4,7 @@ import xbmcutil
 basesite = 'http://www.x-odi.nl/'
 
 def getSourceUrl(name):
+    return basesite + url
     url = xmlreader.getUrlByName(name)
     return url
 
