@@ -120,7 +120,7 @@ def zipfolder(foldername, target_dir, zips_dir, version):
             fn = os.path.join(base, file)
             zipobj.write(fn, os.path.join(foldername[:-4],fn[rootlen:]))
     zipobj.close()
-    shutil.copyfile(zips_dir + foldername, zips_dir + foldername[:-4]+"-"+version+".zip")
+    shutil.copyfile(zips_dir + foldername, zips_dir + foldername[:-4]+version+".zip")
 
                      
 if ( __name__ == "__main__" ):
