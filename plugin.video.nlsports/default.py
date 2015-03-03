@@ -43,7 +43,7 @@ def mainMenu():
     #if newFeatures == "true":
         #addSubMenu('hdstreams','HD Streams - [COLOR red]Unsupported[/COLOR]')
     addDummyItem('')
-    addDummyItem('[COLOR yellow]SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)[COLOR]')
+    addDummyItem('[COLOR yellow]SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)[/COLOR]')
     addDummyItem('[COLOR green]Online Stream[/COLOR]')
     addDummyItem('[COLOR red]Offline Stream[/COLOR]')
     xbmcplugin.endOfDirectory(addon_handle)
