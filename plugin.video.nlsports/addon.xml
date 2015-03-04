@@ -9,9 +9,9 @@
 	</extension>
 	<extension  point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary lang="nl">Bekijk de streams van Nederlandse Sport Streamproviders op uw XBMC / Kodi.</summary>
+		<summary lang="nl">Bekijk NL sport streams van diverse Nederlandse stream providers op uw XBMC / Kodi.</summary>
 		<description lang="nl">Met deze plugin is het mogelijk om streams van Nederlandse stream providers te bekijken.[CR]Let op: Veetle dient te zijn geinstalleerd.</description>
-		<disclaimer>All Credits to the stream providers!</disclaimer>
+		<disclaimer>All Credits to the all the stream providers!</disclaimer>
 		<language>nl</language>
 		<platform>all</platform>
 	</extension>
