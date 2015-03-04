@@ -35,7 +35,7 @@ def mainMenu():
     addSubMenu('janlul', 'JanLul Streams')
     addSubMenu('daz','DazSports Streams')
     addSubMenu('stv','STV Streams')
-    addSubMenu('13stream', '13th stream')
+    addSubMenu('13stream', '13th Stream')
     addSubMenu('bvls','BVLS Streams')
     #addSubMenu('lmmg','LMMG Streams')
     #addSubMenu('mdhzk','MDHZK Streams')
@@ -43,9 +43,9 @@ def mainMenu():
     #if newFeatures == "true":
         #addSubMenu('hdstreams','HD Streams - [COLOR red]Unsupported[/COLOR]')
     addDummyItem('')
-    addDummyItem('[COLOR yellow]SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)[/COLOR]')
-    addDummyItem('[COLOR green]Online Stream[/COLOR]')
-    addDummyItem('[COLOR red]Offline Stream[/COLOR]')
+    addDummyItem('[COLOR yellow]SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)-Bedankt[/COLOR]')
+    addDummyItem('[COLOR green]Stream online[/COLOR]')
+    addDummyItem('[COLOR red]Stream offline[/COLOR]')
     xbmcplugin.endOfDirectory(addon_handle)
 
 def build_url(query):
