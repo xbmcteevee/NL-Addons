@@ -90,7 +90,7 @@ if argSite is None:
         xbmc.Player().play(pl)
 else:
     site = argSite[0]
-    pDialog.create('NL Sport Streams', 'Laden van streams...')
+    pDialog.create('NL Sports', 'Laden van streams...')
     if site == 'janlul': #Janlul.com
         janlul.addStreams()
     elif site == 'daz': #DazSports.org

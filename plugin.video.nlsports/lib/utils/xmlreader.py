@@ -9,4 +9,9 @@ def getUrlByName(name):
     data = response.read()
     response.close()
     root = ET.fromstring(data)
-    return root.find('./stream[name="'+name+'"]/url').text
+    streams = root.findall("stream")
+    for stream in streams:
+        if stream.find("name").text == name:
+            return stream.find("url").text
+    return ''
+    #return root.find('./stream[name="%s"]/url' % name).text
