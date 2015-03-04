@@ -39,7 +39,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.nlsports" name="NL Sports" version="1.0.2" provider-name="XODI &amp; NLSPORTS">
+<addon id="plugin.video.nlsports" name="NL Sports" version="1.1" provider-name="XODI &amp; NLSPORTS">
 	<requires>
 		<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
 		<import addon="plugin.video.p2p-streams" version="1.1" optional="false"/>
@@ -51,7 +51,7 @@
 		<platform>all</platform>
 		<summary lang="nl">Bekijk NL sport streams van diverse Nederlandse stream providers op uw XBMC / Kodi.</summary>
 		<description lang="nl">Met deze plugin is het mogelijk om streams van Nederlandse stream providers te bekijken.[CR]Let op: Veetle dient te zijn geinstalleerd.</description>
-		<disclaimer>All Credits to the all the stream providers!</disclaimer>
+		<disclaimer>All Credits to all the stream providers!</disclaimer>
 		<language>nl</language>
 		<platform>all</platform>
 	</extension>
