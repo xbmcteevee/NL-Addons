@@ -2,7 +2,7 @@ import sys, urllib2, urllib
 import xbmcgui
 import xbmcplugin, xbmcaddon
 import urlparse
-import paths
+import paths, tvguide
 
 import socket, sys
 
@@ -42,6 +42,7 @@ def mainMenu():
     addSubMenu('spst','Sports-streams')
     if newFeatures == "true":
         addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
+    addSubMenu('tvguide', 'TV Gids')
     addDummyItem('')
     addDummyItem('[COLOR yellow]Bedank de streamers, SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)[/COLOR]')
     addDummyItem('[COLOR green]Stream online[/COLOR]')
@@ -117,6 +118,8 @@ else:
         sopcast.add13Stream()
     elif site == 'hdstreams':
         sopcast.addStreams()
+    elif site == 'tvguide':
+        tvguide.showList()
     else:
         mainMenu()
 
