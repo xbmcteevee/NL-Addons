@@ -40,8 +40,8 @@ def mainMenu():
     #addSubMenu('lmmg','LMMG Streams')
     #addSubMenu('mdhzk','MDHZK Streams')
     addSubMenu('spst','Sports-streams')
-    #if newFeatures == "true":
-        #addSubMenu('hdstreams','HD Streams - [COLOR red]Unsupported[/COLOR]')
+    if newFeatures == "true":
+        addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
     addDummyItem('')
     addDummyItem('[COLOR yellow]Bedank de streamers, SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)[/COLOR]')
     addDummyItem('[COLOR green]Stream online[/COLOR]')
@@ -109,6 +109,8 @@ else:
         mdhzk.addStreams()
     elif site == 'spst': #sports-streams.com
         spst.addStreams()
+    elif site == 'sotd': #sports-streams.com
+        sotd.addStreams()
     elif site == 'bvls': #bvls2013.com
         bvls.addStreams()
     elif site == '13stream':
