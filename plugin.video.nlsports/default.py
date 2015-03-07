@@ -2,7 +2,7 @@ import sys, urllib2, urllib
 import xbmcgui
 import xbmcplugin, xbmcaddon
 import urlparse
-import paths
+import paths, tvguide
 
 import socket, sys
 
@@ -40,6 +40,7 @@ def mainMenu():
     #addSubMenu('lmmg','LMMG Streams')
     #addSubMenu('mdhzk','MDHZK Streams')
     addSubMenu('spst','Sports-streams')
+    addSubMenu('tvguide', 'TV Gids')
     #if newFeatures == "true":
         #addSubMenu('hdstreams','HD Streams - [COLOR red]Unsupported[/COLOR]')
     addDummyItem('')
@@ -115,6 +116,8 @@ else:
         sopcast.add13Stream()
     elif site == 'hdstreams':
         sopcast.addStreams()
+    elif site == 'tvguide':
+        tvguide.showList()
     else:
         mainMenu()
 
