@@ -46,11 +46,12 @@ def getLinkByName(streamname) :
         site = 'janlul'
     elif compare == 'daz' :
         site = 'daz'
+    elif compare == 'dsp' :
+        site = 'daz'
     elif compare == 'stv' :
         site = 'stv'
     elif compare == 'bvl' :
         site = 'bvls'
     else :
-        site = 'unknown'
-    url = 'plugin://plugin.video.nlsports/?site='+site
+        site = 'tvguide'
     return site
