@@ -40,8 +40,9 @@ def mainMenu():
     #addSubMenu('lmmg','LMMG Streams')
     #addSubMenu('mdhzk','MDHZK Streams')
     addSubMenu('spst','Sports-streams')
-    if newFeatures == "true":
-        addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
+    addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
+    #if newFeatures == "true":
+    #    addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
     addSubMenu('tvguide', 'TV Gids')
     addDummyItem('')
     addDummyItem('[COLOR yellow]Bedank de streamers, SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)[/COLOR]')
