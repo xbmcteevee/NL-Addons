@@ -52,6 +52,8 @@ def getLinkByName(streamname) :
         site = 'stv'
     elif compare == 'bvl' :
         site = 'bvls'
+    elif compare == 'str' :
+        site = 'sotd'
     else :
         site = 'tvguide'
     return site
