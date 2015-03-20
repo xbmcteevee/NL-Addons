@@ -1,3 +1,10 @@
+[B]v1.3[/B]
+- Added Stream of the Day
+- Added Laat Mij Maar Gaan
+
+[B]v1.2[/B]
+- Added TV-guide
+
 [B]v1.1[/B]
 - Thanks to misa2610 for correcting the typo's
 
