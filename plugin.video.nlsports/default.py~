@@ -37,17 +37,13 @@ def mainMenu():
     addSubMenu('stv','STV Streams')
     addSubMenu('13stream', '13th Stream')
     addSubMenu('bvls','BVLS Streams')
-    #addSubMenu('lmmg','LMMG Streams')
+    addSubMenu('lmmg','LMMG Streams')
     #addSubMenu('mdhzk','MDHZK Streams')
     addSubMenu('spst','Sports-streams')
-<<<<<<< HEAD
-    if newFeatures == "true":
-        addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
-=======
-    addSubMenu('tvguide', 'TV Gids')
+    addSubMenu('sotd','Stream of the Day')
     #if newFeatures == "true":
-        #addSubMenu('hdstreams','HD Streams - [COLOR red]Unsupported[/COLOR]')
->>>>>>> a573e064d2add7303cc6d33ff225b0bfd11b7a52
+    #    addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
+    addSubMenu('tvguide', 'TV Gids')
     addDummyItem('')
     addDummyItem('[COLOR yellow]Bedank de streamers, SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)[/COLOR]')
     addDummyItem('[COLOR green]Stream online[/COLOR]')

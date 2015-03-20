@@ -37,10 +37,10 @@ def mainMenu():
     addSubMenu('stv','STV Streams')
     addSubMenu('13stream', '13th Stream')
     addSubMenu('bvls','BVLS Streams')
-    #addSubMenu('lmmg','LMMG Streams')
+    addSubMenu('lmmg','LMMG Streams')
     #addSubMenu('mdhzk','MDHZK Streams')
     addSubMenu('spst','Sports-streams')
-    addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
+    addSubMenu('sotd','Stream of the Day')
     #if newFeatures == "true":
     #    addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
     addSubMenu('tvguide', 'TV Gids')
@@ -97,7 +97,7 @@ else:
         janlul.addStreams()
     elif site == 'daz': #DazSports.org
         dazsports.addStreams()
-    elif site == 'dsc': #DSCPlus.ord
+    elif site == 'dsc': #DSCPlus.org
         dscplus.addStreams()
     elif site == 'ads': #AchterdijnSports
         ads.addStreams()
