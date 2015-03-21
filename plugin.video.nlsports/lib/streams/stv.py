@@ -30,6 +30,11 @@ def addStreams():
         color = 'red'	
     xbmcutil.addMenuItem('[COLOR '+color+']STV Streams - Flash 5[/COLOR]', stv5, 'true', 'stv', 'stv')
 
+    xbmcutil.updateProgressBar(pBar, 48, 'STV Streams - Flash 6')
+    stv6 = bitly.getLink('stv-6', sourceSite)
+    veetle.addChannel('STV Streams - Flash 6', stv6, 'stv')
+
+    '''
     xbmcutil.updateProgressBar(pBar, 72, 'STV Streams - Flash 6')
     #stv6 = 'http://5.135.73.67:1935/liveorigin/stvsport1voetbal.stream/stvsport1voetbal.stream/playlist.m3u8'
     stv6 = 'http://191.101.46.42:1935/liveorigin/stvsport1voetbal.stream/stvsport1voetbal.stream/playlist.m3u8'
@@ -38,6 +43,7 @@ def addStreams():
     else :
         color = 'red'
     xbmcutil.addMenuItem('[COLOR '+color+']STV Streams - Flash 6[/COLOR]', stv6, 'true', 'stv', 'stv')
+    '''
 
     xbmcutil.updateProgressBar(pBar, 84, 'STV Streams - ACE HD')
     hd1hash = bitly.getAceHash('http://stvstreams.com/flash1/stvacehd.html')
