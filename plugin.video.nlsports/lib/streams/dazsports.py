@@ -10,10 +10,14 @@ def addStreams():
     #xbmcutil.addMenuItem('DAZ Sports 2', 'micast://')
     print("IP OF MICAST = " + getMicastIp())
     ipAddress = getMicastIp()
-    addMicast(ipAddress, 'DAZ Sports 3', 'dazsports3stR', 'daz', 'daz')
+    #addMicast(ipAddress, 'DAZ Sports 3', 'dazsports3stR', 'daz', 'daz')
     #addMicast(ipAddress, 'DAZ Sports 4', 'daz2I2S', 'daz', 'daz')
     #addMicast(ipAddress, 'DAZ Sports 5', 'daz1yZ1', 'daz', 'daz')
     
+    xbmcutil.updateProgressBar(pBar, 49, 'DazSports 3')
+    daz_stream3 = bitly.getLink('daz3', sourceSite)
+    veetle.addChannel('DazSports - Stream 3', daz_stream3, 'daz')
+
     xbmcutil.updateProgressBar(pBar, 49, 'DazSports 4')
     daz_stream4 = bitly.getLink('daz4', sourceSite)
     veetle.addChannel('DazSports - Stream 4', daz_stream4, 'daz')
