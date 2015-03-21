@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.nlsports" name="NL Sports" version="1.3" provider-name="XODI &amp; NLSPORTS">
-	<requires>
-		<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
-		<import addon="plugin.video.p2p-streams" version="1.1" optional="false"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-	<extension  point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="nl">Bekijk NL sport streams van diverse Nederlandse stream providers op uw XBMC / Kodi.</summary>
-		<description lang="nl">Met deze addon is het mogelijk om streams van Nederlandse stream providers te bekijken.[CR]Let op: Veetle dient te zijn geinstalleerd.</description>
-		<disclaimer>Credits to all the stream providers!</disclaimer>
-		<language>nl</language>
-		<platform>all</platform>
-	</extension>
-</addon>
-
 <addon id="repository.nlsports" name="NL Sports Repository" version="1.1" provider-name="XODI &amp; NLSPORTS">
 	<extension point="xbmc.addon.repository" name="NL Sports Repository">
 		<info compressed="true">https://raw.githubusercontent.com/kodidev/NL-Addons/master/addons.xml</info>
@@ -31,22 +13,8 @@
 	</extension>
 </addon>
 
-<addon id="repository.clubtv.nl" name="Club TV Repository" version="1.0.1" provider-name="vDia Internet Applications">
-	<extension point="xbmc.addon.repository" name="Club TV Repository">
-		<info compressed="true">http://clubtv.dooremolen.com/addons/addons.xml</info>
-		<checksum>http://clubtv.dooremolen.com/addons/addons.xml.md5</checksum>
-		<datadir zip="true">http://clubtv.dooremolen.com/addons</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Officiele Youtube kanalen van de voetbalclubs uit de Eredivisie</summary>
-		<description>Download and install addons voor de Officiele Youtube kanalen van de voetbalclubs uit de Eredivisie</description>
-		<platform>all</platform>
-	</extension>
-</addon>
-
 <addon id="plugin.video.veetle" version="0.3.1" name="Veetle" provider-name="fightnight (creator: t0mm0)">
     <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.simplejson" version="2.0.10"/>
         <import addon="script.common.plugin.cache" version="1.3.0"/>
     </requires>
@@ -68,6 +36,24 @@
 		<disclaimer lang="pt_BR">Não funciona para streams 'HD' que necessitam do download de software.</disclaimer>
         <platform>all</platform>
     </extension>
+</addon>
+
+<addon id="plugin.video.nlsports" name="NL Sports" version="1.3.1" provider-name="XODI &amp; NLSPORTS">
+	<requires>
+		<import addon="plugin.video.veetle" version="0.3.1" optional="false"/>
+		<import addon="plugin.video.p2p-streams" version="1.1" optional="false"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension  point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="nl">Bekijk NL sport streams van diverse Nederlandse stream providers op uw XBMC / Kodi.</summary>
+		<description lang="nl">Met deze addon is het mogelijk om streams van Nederlandse stream providers te bekijken.[CR]Let op: Veetle dient te zijn geinstalleerd.</description>
+		<disclaimer>Credits to all the stream providers!</disclaimer>
+		<language>nl</language>
+		<platform>all</platform>
+	</extension>
 </addon>
 
 <addon id="plugin.video.p2p-streams"
@@ -101,5 +87,18 @@
     <website>https://code.google.com/p/p2p-strm/</website>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="repository.clubtv.nl" name="Club TV Repository" version="1.0.1" provider-name="vDia Internet Applications">
+	<extension point="xbmc.addon.repository" name="Club TV Repository">
+		<info compressed="true">http://clubtv.dooremolen.com/addons/addons.xml</info>
+		<checksum>http://clubtv.dooremolen.com/addons/addons.xml.md5</checksum>
+		<datadir zip="true">http://clubtv.dooremolen.com/addons</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Officiele Youtube kanalen van de voetbalclubs uit de Eredivisie</summary>
+		<description>Download and install addons voor de Officiele Youtube kanalen van de voetbalclubs uit de Eredivisie</description>
+		<platform>all</platform>
+	</extension>
 </addon>
 </addons>
