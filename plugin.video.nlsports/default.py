@@ -86,8 +86,10 @@ if argSite is None:
         #li = xbmcgui.ListItem('Credits')
         #li.setProperty('IsPlayable','true')
         #xbmc.PlayList(1).add(credits, li)
-        li = xbmcgui.ListItem(str(streamName[0]))
+        iconimg = os.path.join(paths.rootDir, 'icon.png')
+        li = xbmcgui.ListItem('NL Sports - '+str(streamName[0]), iconImage=iconimg, thumbnailImage=iconimg)
         li.setProperty('IsPlayable', 'true')
+        li.setProperty('fanart_image', os.path.join(paths.rootDir, 'fanart.jpg'))
         xbmc.PlayList(1).add(str(playUrl[0]), li)
         xbmc.Player().play(pl)
 else:
