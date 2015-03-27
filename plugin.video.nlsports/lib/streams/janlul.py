@@ -27,8 +27,8 @@ def addStreams():
     veetle.addChannel('JanLul.com - Stream 5', jl_stream5, 'janlul')
 
     xbmcutil.updateProgressBar(pBar, 96, 'JanLul 6')
-    jl_stream6 = bitly.getLink('janlul6', sourceSite)
-    veetle.addChannel('JanLul.com - Stream 6', jl_stream6, 'janlul')
+    #jl_stream6 = bitly.getLink('janlul6', sourceSite)
+    #veetle.addChannel('JanLul.com - Stream 6', jl_stream6, 'janlul')
     xbmcutil.addMenuItem('JanLul.com - Stream 6 (new style)', 'http://stream.ssh101.com/hls/janlul6.m3u8', 'true', 'janlul', 'janlul')
 
     xbmcutil.updateProgressBar(pBar, 100,'Gereed!')

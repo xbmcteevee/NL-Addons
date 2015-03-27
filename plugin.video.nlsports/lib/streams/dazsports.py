@@ -14,7 +14,7 @@ def addStreams():
     #addMicast(ipAddress, 'DAZ Sports 4', 'daz2I2S', 'daz', 'daz')
     #addMicast(ipAddress, 'DAZ Sports 5', 'daz1yZ1', 'daz', 'daz')
     
-    xbmcutil.updateProgressBar(pBar, 49, 'DazSports 3')
+    xbmcutil.updateProgressBar(pBar, 34, 'DazSports 3')
     daz_stream3 = bitly.getLink('daz3', sourceSite)
     veetle.addChannel('DazSports - Stream 3', daz_stream3, 'daz')
 

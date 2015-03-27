@@ -39,7 +39,7 @@ def mainMenu():
     addSubMenu('bvls','BVLS Streams')
     addSubMenu('lmmg','LMMG Streams')
     #addSubMenu('mdhzk','MDHZK Streams')
-    addSubMenu('spst','Sports-streams')
+    #addSubMenu('spst','Sports-streams')
     addSubMenu('sotd','Stream of the Day')
     #if newFeatures == "true":
     #    addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')

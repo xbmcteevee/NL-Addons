@@ -30,7 +30,7 @@ def addStreams():
         color = 'red'	
     xbmcutil.addMenuItem('[COLOR '+color+']STV Streams - Flash 5[/COLOR]', stv5, 'true', 'stv', 'stv')
 
-    xbmcutil.updateProgressBar(pBar, 48, 'STV Streams - Flash 6')
+    xbmcutil.updateProgressBar(pBar, 72, 'STV Streams - Flash 6')
     stv6 = bitly.getLink('stv-6', sourceSite)
     veetle.addChannel('STV Streams - Flash 6', stv6, 'stv')
 
