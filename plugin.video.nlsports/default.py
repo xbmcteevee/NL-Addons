@@ -4,7 +4,7 @@ import xbmcplugin, xbmcaddon
 import urlparse
 import paths, tvguide
 
-import socket, sys
+import socket, sys, os
 
 from lib.streams import *
 from lib.utils import *
