@@ -27,8 +27,6 @@ def addStreams():
     veetle.addChannel('JanLul.com - Stream 5', jl_stream5, 'janlul')
 
     xbmcutil.updateProgressBar(pBar, 96, 'JanLul 6')
-    #jl_stream6 = bitly.getLink('janlul6', sourceSite)
-    #veetle.addChannel('JanLul.com - Stream 6', jl_stream6, 'janlul')
     if bitly.getResponse('http://stream.ssh101.com/hls/janlul6.m3u8') :
         jl6color = 'green'
     else :
