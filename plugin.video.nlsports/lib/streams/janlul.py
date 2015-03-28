@@ -29,7 +29,11 @@ def addStreams():
     xbmcutil.updateProgressBar(pBar, 96, 'JanLul 6')
     #jl_stream6 = bitly.getLink('janlul6', sourceSite)
     #veetle.addChannel('JanLul.com - Stream 6', jl_stream6, 'janlul')
-    xbmcutil.addMenuItem('JanLul.com - Stream 6', 'http://stream.ssh101.com/hls/janlul6.m3u8', 'true', 'janlul', 'janlul')
+    if bitly.getResponse('http://stream.ssh101.com/hls/janlul6.m3u8') :
+        jl6color = 'green'
+    else :
+        jl6color = 'red'
+    xbmcutil.addMenuItem('[COLOR '+jl6color+']JanLul.com - Stream 6[/COLOR]', 'http://stream.ssh101.com/hls/janlul6.m3u8', 'true', 'janlul', 'janlul')
 
     xbmcutil.updateProgressBar(pBar, 100,'Gereed!')
     xbmcutil.endOfList()
