@@ -45,7 +45,7 @@ def mainMenu():
     #    addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
     addSubMenu('tvguide', 'TV Gids')
     addDummyItem('')
-    addDummyItem('[COLOR yellow]Bedank de streamers, SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)[/COLOR]')
+    #addDummyItem('[COLOR yellow]Bedank de streamers, SMS: \'DONATE STREAM\' naar 7733 (E 3,00 p/b)[/COLOR]')
     addDummyItem('[COLOR green]Stream online[/COLOR]')
     addDummyItem('[COLOR red]Stream offline[/COLOR]')
     xbmcplugin.endOfDirectory(addon_handle)
