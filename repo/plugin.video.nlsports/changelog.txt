@@ -1,5 +1,12 @@
+[B]v1.6[/B]
+- Fixing some stream resolving
+- Added JL 7 & 8
+
 [B]v1.5[/B]
 - Updating streams
+
+[B]v1.4[/B]
+- *magic*
 
 [B]v1.3[/B]
 - Added Stream of the Day
