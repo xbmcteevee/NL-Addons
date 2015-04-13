@@ -1,3 +1,6 @@
+[B]v1.6.5[/B]
+- Added SOTD 4
+
 [B]v1.6[/B]
 - Fixing some stream resolving
 - Added JL 7 & 8
