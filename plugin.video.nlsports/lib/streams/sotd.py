@@ -7,17 +7,21 @@ sourceSite = 'http://www.streamoftheday.com'
 def addStreams():
     pBar = xbmcutil.createProgressBar('NL Sports', 'Laden van streams...')
 
-    xbmcutil.updateProgressBar(pBar, 32, 'Stream of the Day - Stream 1')
+    xbmcutil.updateProgressBar(pBar, 24, 'Stream of the Day - Stream 1')
     sotd_stream1 = getLink('sotd1', sourceSite)
     veetle.addChannel('Stream of the Day - Stream  1', sotd_stream1, 'sotd')
 
-    xbmcutil.updateProgressBar(pBar, 64, 'Stream of the Day - Stream 2')
+    xbmcutil.updateProgressBar(pBar, 48, 'Stream of the Day - Stream 2')
     sotd_stream2 = getLink('sotd2', sourceSite)
     veetle.addChannel('Stream of the Day - Stream 2', sotd_stream2, 'sotd')
 
-    xbmcutil.updateProgressBar(pBar, 98, 'Stream of the Day - Stream 3')
+    xbmcutil.updateProgressBar(pBar, 52, 'Stream of the Day - Stream 3')
     sotd_stream3 = getLink('sotd3', sourceSite)
     veetle.addChannel('Stream of the Day - Stream 3', sotd_stream3, 'sotd')
+
+    xbmcutil.updateProgressBar(pBar, 76, 'Stream of the Day - Stream 4')
+    sot4_stream3 = getLink('sotd4', sourceSite)
+    veetle.addChannel('Stream of the Day - Stream 4', sotd_stream4, 'sotd')
 
     xbmcutil.updateProgressBar(pBar, 100,'Gereed!')
     xbmcutil.endOfList()
