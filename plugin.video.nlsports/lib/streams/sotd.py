@@ -20,7 +20,7 @@ def addStreams():
     veetle.addChannel('Stream of the Day - Stream 3', sotd_stream3, 'sotd')
 
     xbmcutil.updateProgressBar(pBar, 76, 'Stream of the Day - Stream 4')
-    sot4_stream3 = getLink('sotd4', sourceSite)
+    sotd_stream4 = getLink('sotd4', sourceSite)
     veetle.addChannel('Stream of the Day - Stream 4', sotd_stream4, 'sotd')
 
     xbmcutil.updateProgressBar(pBar, 100,'Gereed!')
