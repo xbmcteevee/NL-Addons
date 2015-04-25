@@ -6,54 +6,46 @@ sourceSite='http://dazsports.org'
 
 def addStreams():
     pBar = xbmcutil.createProgressBar('NL Sports', 'Laden van streams...')
-    #xbmcutil.addMenuItem('DAZ Sports 1', 'micast://')
-    #xbmcutil.addMenuItem('DAZ Sports 2', 'micast://')
-    print("IP OF MICAST = " + getMicastIp())
-    ipAddress = getMicastIp()
-    #addMicast(ipAddress, 'DAZ Sports 3', 'dazsports3stR', 'daz', 'daz')
-    #addMicast(ipAddress, 'DAZ Sports 4', 'daz2I2S', 'daz', 'daz')
-    #addMicast(ipAddress, 'DAZ Sports 5', 'daz1yZ1', 'daz', 'daz')
+    xbmcutil.updateProgressBar(pBar, 33, 'DazSports 3')
+    addStream('player3','DazSports - Stream 3')
+   
+    xbmcutil.updateProgressBar(pBar, 66, 'DazSports 4')
+    addStream('player4','DazSports - Stream 4')
     
-    xbmcutil.updateProgressBar(pBar, 34, 'DazSports 3')
-    daz_stream3 = bitly.getLink('daz3', sourceSite)
-    veetle.addChannel('DazSports - Stream 3', daz_stream3, 'daz')
-
-    xbmcutil.updateProgressBar(pBar, 49, 'DazSports 4')
-    daz_stream4 = bitly.getLink('daz4', sourceSite)
-    veetle.addChannel('DazSports - Stream 4', daz_stream4, 'daz')
-
-    xbmcutil.updateProgressBar(pBar, 98, 'DazSports 5')
-    daz_stream5 = bitly.getLink('daz5', sourceSite)
-    veetle.addChannel('DazSports - Stream 5', daz_stream5, 'daz')    
+    xbmcutil.updateProgressBar(pBar, 99, 'DazSports 5')
+    addStream('player5','DazSports - Stream 5')
     xbmcutil.endOfList()
 
-def addMicast(ipAddress, displayName, micastId, icon=None, fanart=None):
-    rtmp_url = 'rtmp://'+ipAddress+':443/liveedge/ playpath='+micastId+' swfUrl=http://turbocast.tv/images/player.swf live=1 pageUrl=http://micast.tv/chn2.php?ch='+micastId
-    xbmcutil.addMenuItem(displayName, rtmp_url, 'true', icon, fanart)
+    
+def addStream(stream, display) :
+    streamUrl = findStream(stream) 
+    if streamUrl[-4:] == '.flv' :
+        veetle.addChannel(display, streamUrl, 'daz')
+    else :
+        if bitly.getResponse(streamUrl) :
+            color = 'green'
+        else :
+            streamUrl = ''
+            color = 'red'
+        xbmcutil.addMenuItem('[COLOR '+color+']'+display+'[/COLOR]', streamUrl, 'true', 'daz','daz')
 
-def getMicastIp():
-    strContent = getPage('http://micast.tv/chn2.php')
-    strDec = getDecString(strContent)
-    strIp = getPage('http://x-odi.nl/decode_micast.php?decoded='+strDec)
-    return strIp
 
-def getPage(page):
-    url = page
-    try:
-        #headers = {'User-agent' : 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:28.0) Gecko/20100101 Firefox/28.0'}
-        req = urllib2.Request(url ,None)
-        response = urllib2.urlopen(req, timeout=xbmcutil.getTimeout())
-        data = response.read()
-        response.close()
-        return data
+def findStream(page) :
+    ua = bitly.getUserAgent()
+    page1 = resolveIframe(sourceSite + '/' + page +'.php')
+    pagecontent = bitly.getPage(sourceSite + '/' + page1, sourceSite, ua)
+    b64coded = bitly.getBaseEncodedString(pagecontent)
+    streamUrl = bitly.getStreamUrl(b64coded)
+    return streamUrl
+    
+def resolveIframe(page) :
+    try :
+        if(page[:4] != 'http') :
+            page = sourceSite + '/' + page
+        userAgent = bitly.getUserAgent()
+        pagecontent = bitly.getPage(page, sourceSite, userAgent)
+        regIframe = re.compile('<iframe(.*?)src="(.*?)"(.*?)><\/iframe>', re.DOTALL)
+        iframesrc = regIframe.search(pagecontent).group(2)
+        return iframesrc
     except :
-        return ''
-        print('We failed to open '+url)
-
-def getDecString(content):
-    try:
-        find_dec = re.compile("dec\(\"(.*?)\"\)" , re.DOTALL)
-        decoded = find_dec.search(content).group(1)
-        return decoded
-    except:
-        return ''
+        return page

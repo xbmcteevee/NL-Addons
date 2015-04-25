@@ -18,16 +18,19 @@ def showList():
         for table in tables :
             for tbody in table.findall('tbody') :
                 for tr in tbody.findall('tr') :
-                    tdata = tr.findall('td')
-                    dtime = tdata[0].text
-                    dt = datetime.strptime(dtime, "%Y-%m-%d %H:%M:%S")
-                    dtime = str(dt.day).rjust(2,'0') + '-' + str(dt.month).rjust(2,'0') + ' ' + str(dt.hour).rjust(2,'0') + ':' + str(dt.minute).rjust(2,'0')
-                    ev = tdata[1].text
-                    streamer = tdata[2].text
-                    strName = '['+dtime + '] ' + ev + ' - [I]'+ streamer + '[/I]'
-                    strUrl = 'plugin://plugin.video.nlsports/none'
-                    intern = getLinkByName(streamer)
-                    addSubMenu(intern, strName)
+                    try :
+                        tdata = tr.findall('td')
+                        dtime = tdata[0].text
+                        dt = datetime.strptime(dtime, "%Y-%m-%d %H:%M:%S")
+                        dtime = str(dt.day).rjust(2,'0') + '-' + str(dt.month).rjust(2,'0') + ' ' + str(dt.hour).rjust(2,'0') + ':' + str(dt.minute).rjust(2,'0')
+                        ev = tdata[1].text
+                        streamer = tdata[2].text
+                        strName = '['+dtime + '] ' + ev + ' - [I]'+ streamer + '[/I]'
+                        strUrl = 'plugin://plugin.video.nlsports/none'
+                        intern = getLinkByName(streamer)
+                        addSubMenu(intern, strName)
+                    except :
+                        print('ERROR')
 
 def addSubMenu(internal, readable):             
     url = build_url({'site': internal})         

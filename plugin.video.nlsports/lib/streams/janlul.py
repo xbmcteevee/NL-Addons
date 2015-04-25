@@ -37,10 +37,8 @@ def addStreams() :
 def addStream(stream, display) :
     streamUrl = findStream(stream) 
     if streamUrl[-4:] == '.flv' :
-        print('Veetle')
         veetle.addChannel(display, streamUrl, 'janlul')
     else :
-        print('M3U')
         if bitly.getResponse(streamUrl) :
             color = 'green'
         else :
@@ -64,9 +62,8 @@ def resolveIframe(page) :
             page = sourceSite + '/' + page
         userAgent = bitly.getUserAgent()
         pagecontent = bitly.getPage(page, sourceSite, userAgent)
-        regIframe = re.compile('iframe\ src\=\"(.*?)\"\ name\=\"iframe_name\"', re.DOTALL)
+        regIframe = re.compile('iframe src="(.*)" name="iframe_name"')
         iframesrc = regIframe.search(pagecontent).group(1)
         return iframesrc
     except :
         return page
-
