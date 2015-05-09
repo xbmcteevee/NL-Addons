@@ -19,6 +19,7 @@ def addStreams():
     
 def addStream(stream, display) :
     streamUrl = findStream(stream) 
+    print(streamUrl)
     if streamUrl[-4:] == '.flv' :
         veetle.addChannel(display, streamUrl, 'daz')
     else :
@@ -31,12 +32,23 @@ def addStream(stream, display) :
 
 
 def findStream(page) :
-    ua = bitly.getUserAgent()
-    page1 = resolveIframe(sourceSite + '/' + page +'.php')
-    pagecontent = bitly.getPage(sourceSite + '/' + page1, sourceSite, ua)
-    b64coded = bitly.getBaseEncodedString(pagecontent)
-    streamUrl = bitly.getStreamUrl(b64coded)
-    return streamUrl
+    try :
+        ua = bitly.getUserAgent()
+        page1 = resolveIframe(sourceSite + '/' + page +'.php')
+        pagecontent = bitly.getPage(sourceSite + '/' + page1, sourceSite, ua)
+        #b64coded = bitly.getBaseEncodedString(pagecontent)
+        #streamUrl = bitly.getStreamUrl(b64coded)
+        findFile = re.compile('file(.*?):(.*?)\"(.*?)\",', re.DOTALL)
+        streamUrl = findFile.search(pagecontent).group(3)
+        if(streamUrl[:4] == 'http') :
+            return streamUrl
+        else :
+            b64coded = bitly.getBaseEncodedString(pagecontent)
+            b64streamUrl = bitly.getStreamUrl(streamUrl)
+            return b64streamUrl
+    except :
+        return ''
+        
     
 def resolveIframe(page) :
     try :
@@ -44,7 +56,7 @@ def resolveIframe(page) :
             page = sourceSite + '/' + page
         userAgent = bitly.getUserAgent()
         pagecontent = bitly.getPage(page, sourceSite, userAgent)
-        regIframe = re.compile('<iframe(.*?)src="(.*?)"(.*?)><\/iframe>', re.DOTALL)
+        regIframe = re.compile('<iframe(.*?)src="(.*?)"><\/iframe>', re.DOTALL)
         iframesrc = regIframe.search(pagecontent).group(2)
         return iframesrc
     except :
