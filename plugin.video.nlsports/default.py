@@ -115,8 +115,10 @@ else:
         mdhzk.addStreams()
     elif site == 'spst': #sports-streams.com
         spst.addStreams()
-    elif site == 'sotd': #sports-streams.com
+    elif site == 'sotd': #streamoftheday.nl
         sotd.addStreams()
+    elif site == 'pole': #polepositionv2.nl
+        pole.addStreams()
     elif site == 'bvls': #bvls2013.com
         bvls.addStreams()
     elif site == '13stream':
