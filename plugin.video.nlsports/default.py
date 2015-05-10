@@ -32,7 +32,8 @@ def addSubMenu(internal, readable):
     xbmcplugin.addDirectoryItem(handle=addon_handle, url=url, listitem=li, isFolder=True)
 
 def mainMenu():
-    addSubMenu('janlul', 'JanLul Streams')
+    #addSubMenu('janlul', 'JanLul Streams')
+    addDummyItem('[COLOR red]JanLul Streams[/COLOR] - [I]Tijdelijk onbruikbaar[/I]')
     addSubMenu('daz','DazSports Streams')
     addSubMenu('stv','STV Streams')
     addSubMenu('13stream', '13th Stream')
@@ -41,6 +42,7 @@ def mainMenu():
     #addSubMenu('mdhzk','MDHZK Streams')
     #addSubMenu('spst','Sports-streams')
     addSubMenu('sotd','Stream of the Day')
+    addSubMenu('pole','Poleposition')
     #if newFeatures == "true":
     #    addSubMenu('sotd','Stream of the Day - [COLOR red]Unsupported[/COLOR]')
     addSubMenu('tvguide', 'TV Gids')

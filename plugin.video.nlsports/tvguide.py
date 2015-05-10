@@ -45,7 +45,7 @@ def build_url(query):
 
 def getLinkByName(streamname) :
     compare = streamname[0:3].lower()
-    if compare == 'jan' :
+    if compare == 'tvguide' :
         site = 'janlul'
     elif compare == 'daz' :
         site = 'daz'
@@ -57,6 +57,8 @@ def getLinkByName(streamname) :
         site = 'bvls'
     elif compare == 'str' :
         site = 'sotd'
+    elif compare == 'pol' :
+        site = 'pole'
     else :
         site = 'tvguide'
     return site
