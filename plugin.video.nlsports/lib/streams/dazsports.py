@@ -36,20 +36,12 @@ def findStream(page) :
         ua = bitly.getUserAgent()
         page1 = resolveIframe(sourceSite + '/' + page +'.php')
         pagecontent = bitly.getPage(sourceSite + '/' + page1, sourceSite, ua)
-        #b64coded = bitly.getBaseEncodedString(pagecontent)
-        #streamUrl = bitly.getStreamUrl(b64coded)
-        findFile = re.compile('file(.*?):(.*?)\"(.*?)\",', re.DOTALL)
-        streamUrl = findFile.search(pagecontent).group(3)
-        if(streamUrl[:4] == 'http') :
-            return streamUrl
-        else :
-            b64coded = bitly.getBaseEncodedString(pagecontent)
-            b64streamUrl = bitly.getStreamUrl(streamUrl)
-            return b64streamUrl
+        b64coded = bitly.getBaseEncodedString(pagecontent)
+        streamUrl = bitly.getStreamUrl(b64coded)
+        return streamUrl
     except :
-        return ''
-        
-    
+        return page
+
 def resolveIframe(page) :
     try :
         if(page[:4] != 'http') :

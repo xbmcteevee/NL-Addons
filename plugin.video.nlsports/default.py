@@ -33,7 +33,7 @@ def addSubMenu(internal, readable):
 
 def mainMenu():
     #addSubMenu('janlul', 'JanLul Streams')
-    addDummyItem('[COLOR red]JanLul Streams[/COLOR] - [I]Tijdelijk onbruikbaar[/I]')
+    #addDummyItem('[COLOR red]JanLul Streams[/COLOR] - [I]Tijdelijk onbruikbaar[/I]')
     addSubMenu('daz','DazSports Streams')
     addSubMenu('stv','STV Streams')
     addSubMenu('13stream', '13th Stream')
