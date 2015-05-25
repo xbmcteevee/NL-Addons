@@ -49,7 +49,7 @@ def addStream(stream, display) :
 
 def findStream(page) :
     ua = bitly.getUserAgent()
-    page1 = resolveIframe(sourceSite + '/' + page +'.html')
+    page1 = resolveIframe(sourceSite + '/' + page +'.php')
     page2 = resolveIframe(page1)
     page2content = bitly.getPage(page2, sourceSite, ua)
     b64coded = bitly.getBaseEncodedString(page2content)
